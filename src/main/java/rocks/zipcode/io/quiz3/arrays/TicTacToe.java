@@ -25,11 +25,23 @@ public class TicTacToe {
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
-        return null;
+        String[] row = board[rowIndex];
+        for(int i = 0; i< row.length-1;i++){
+            if(row[i] == row[i+1]){
+                return true;
+            }
+        }
+        return false;
     }
 
     public Boolean isColumnHomogeneous(Integer columnIndex) {
-        return null;
+        String[] column = getColumn(columnIndex);
+        for(int i = 0; i< column.length-1;i++){
+            if(column[i] != column[i+1]){
+                return false;
+            }
+        }
+        return true;
     }
 
     public String getWinner() {
