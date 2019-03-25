@@ -19,6 +19,7 @@ public class VowelUtils {
 
     public static Integer getIndexOfFirstVowel(String word) {
         char[] letters = word.toCharArray();
+
         for(int i = 0; i < letters.length; i++) {
             if(isVowel(letters[i])) {
                 return i;

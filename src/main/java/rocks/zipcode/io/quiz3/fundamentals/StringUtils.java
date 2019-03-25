@@ -8,7 +8,9 @@ import java.util.*;
 public class StringUtils {
     public static String capitalizeNthCharacter(String str, Integer indexToCapitalize) {
         String afterCapped = "";
+
         char [] letters = str.toCharArray();
+
         for(int i = 0; i < letters.length; i++) {
             if(i == indexToCapitalize) {
                 afterCapped += Character.toUpperCase(letters[i]);
@@ -21,6 +23,7 @@ public class StringUtils {
 
     public static Boolean isCharacterAtIndex(String baseString, Character characterToCheckFor, Integer indexOfString) {
         char [] letters = baseString.toCharArray();
+
         for (int i = 0; i < letters.length; i++) {
             if(letters[indexOfString] == characterToCheckFor) {
                 return true;
@@ -37,6 +40,7 @@ public class StringUtils {
                 noDupes.add(string.substring(i,j));
             }
         }
+
         String[] allSubstrings = noDupes.toArray(new String[noDupes.size()]);
         return allSubstrings;
     }

@@ -34,6 +34,7 @@ public class ArrayUtility<SomeType> {
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
         Integer count = 0;
+
         for(SomeType type : array) {
             if(type.equals(valueToEvaluate)) {
                 count++;

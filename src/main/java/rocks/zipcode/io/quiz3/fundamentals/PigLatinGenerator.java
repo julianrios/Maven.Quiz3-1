@@ -10,7 +10,9 @@ public class PigLatinGenerator {
     public String translate(String str) {
         Pattern firstVowelPattern = Pattern.compile("^([aeiouAEIOU])");
         Matcher matcher = firstVowelPattern.matcher(str);
+
         if (matcher.find()) return str + "way";
+
         return str.replaceAll("^([^aeiouAEIOU]*)(.+)", "$2$1ay");
     }
 }
